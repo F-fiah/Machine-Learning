@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "ec25bbd4ca8ed8d0",
+        "id": "b8ad8b5bccf9be1a",
         "type": "tabs",
         "children": [
           {
-            "id": "0c0bdc6cfbfa50d2",
+            "id": "e2b27f30abebdaa3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "模型预测.md",
+                "file": "无模型_Policy Evaluation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "模型预测"
+              "title": "无模型_Policy Evaluation"
             }
           }
         ]
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "模型预测.md",
+                "file": "数学原理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "模型预测 的反向链接列表"
+              "title": "数学原理 的反向链接列表"
             }
           },
           {
@@ -114,12 +114,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "模型预测.md",
+                "file": "数学原理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "模型预测 的出链列表"
+              "title": "数学原理 的出链列表"
             }
           },
           {
@@ -157,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "模型预测.md",
+                "file": "数学原理.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "模型预测 的大纲"
+              "title": "数学原理 的大纲"
             }
           }
         ]
@@ -181,13 +181,20 @@
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "bases:新建数据库": false
+      "bases:新建数据库": false,
+      "workspaces:管理工作区布局": false
     }
   },
-  "active": "0c0bdc6cfbfa50d2",
+  "active": "e2b27f30abebdaa3",
   "lastOpenFiles": [
+    "figure/LambdaWeight.png",
+    "figure/NStep.png",
+    "figure/PolicyEvaluation.png",
     "数学原理.md",
-    "模型预测.md",
+    "未命名.base",
+    "动态规划求解.md",
+    "无模型_Policy Evaluation.md",
+    "未命名.canvas",
     "figure/迭代.png",
     "figure/MDP.png",
     "figure/价值迭代.png",
@@ -196,7 +203,6 @@
     "新建文件夹",
     "MDP.png",
     "迭代.png",
-    "动态规划求解.md",
     "mdp_demo/mdp/resources/inherit.gif",
     "mdp_demo/mdp/VIgui.java~",
     "mdp_demo/mdp/VIgui.java",
@@ -205,9 +211,6 @@
     "mdp_demo/mdp/VIgui.class",
     "mdp_demo/mdp/VIgui$9.class",
     "mdp_demo/mdp/VIgui$8.class",
-    "mdp_demo/mdp/VIgui$7.class",
-    "mdp/resources/inherit.gif",
-    "价值迭代.png",
-    "政策迭代.png"
+    "mdp/resources/inherit.gif"
   ]
 }
