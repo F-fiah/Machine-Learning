@@ -3,6 +3,7 @@ cssclasses:
   - 机器学习
   - 强化学习
 tags:
+  - 2506-05-06
 ---
 Nobody tell the environment, but still manage to find the optimal way
 Namely estimate the value function of an unknown MDP
@@ -41,6 +42,14 @@ $$ V(S_t) \leftarrow V(S_t) + \alpha \left( G_t - V(S_t) \right) $$
 $$ V(S_t) \leftarrow V(S_t) + \alpha \left( R_{t+1} + \gamma V(S_{t+1}) - V(S_t) \right) $$
 其中 $R_{t+1}$ 是和环境交互直接拿到的真实数据，$V(S_{t+1})$ 是下一步状态的价值估计。它是通过当前的经验和已有的价值进行估计的（利用当前正在学习的价值表）
 
+## 价值表 V
+
+1. 初始化：所有 state 的 value 设置为0
+2. 通过与 environment 的互动对表进行更新
+3. 若遇到了新的 state：
+   - 将其补充到表里，并设置 $V(S_{new}) = 0$
+   - 根据表中相似的旧状态推测新状态的价值
+
 初始时，estimated return 的偏差很大，但会随着学习减少，最终和真实回报一致。
 
 ## n-Step Prediction
@@ -48,6 +57,19 @@ $$ V(S_t) \leftarrow V(S_t) + \alpha \left( R_{t+1} + \gamma V(S_{t+1}) - V(S_t)
 进行 n 步后再进行 estimate
 $n \to \infty$：MC
 $$ \begin{aligned} G_t^{(1)} &= R_{t+1} + \gamma V(S_{t+1}) \\ G_t^{(2)} &= R_{t+1} + \gamma R_{t+2} + \gamma^2 V(S_{t+2}) \\ &\vdots \\ G_t^{(\infty)} &= R_{t+1} + \gamma R_{t+2} + \dots + \gamma^{T-1} R_T \end{aligned} $$
+
+- Online Update：每走 n 步就更新一次 value function，对学习率 α 敏感，更新频繁容易震荡
+- Offline Update：回合结束后，再回头处理轨迹中的每个状态
+
+两种方法得到的 $v(s)$ 大概率不一样，因为在 online 中，价值表 V 实时改变，因此 estimate value 会由于用到已经被修改过的 V而发生改变；对于 offline 轨迹还是用旧 V 生成的，直到批量更新后才会变。
+
+若遇到 new state 是，令 $V(S_{new}) = 0$ ，Online 会因为新状态初值为 0，用很差的目标去更新前面状态，导致前期学习不稳定、效果较差
+但由于 online 具有很高的学习效率，因此也被大量使用
+优化方案：
+- 减小学习率 $\alpha$
+- 使用 n-step TD
+- 使用更加合理的初始价值
+
 ![[NStep.png]]
 **How to combine information from all time-steps: $\lambda-return$**  
 use weight  $(1-\lambda)\lambda^{n-1}$ :

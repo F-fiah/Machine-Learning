@@ -4,21 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "b8ad8b5bccf9be1a",
+        "id": "cec4e0249b8922dd",
         "type": "tabs",
         "children": [
           {
-            "id": "e2b27f30abebdaa3",
+            "id": "ecbac7c4ed38863e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "无模型_Policy Evaluation.md",
+                "file": "Model-Free Control.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "无模型_Policy Evaluation"
+              "title": "Model-Free Control"
+            }
+          },
+          {
+            "id": "0ce4ca1b8cd9a409",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Model-Free Policy Evaluation.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Model-Free Policy Evaluation"
             }
           }
         ]
@@ -53,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:2026-05-08",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -165,12 +179,25 @@
               "icon": "lucide-list",
               "title": "数学原理 的大纲"
             }
+          },
+          {
+            "id": "a2c69fb710bc4dab",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "Model-Free Control.md"
+              },
+              "icon": "lucide-info",
+              "title": "Model-Free Control的笔记属性"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
@@ -185,32 +212,33 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "e2b27f30abebdaa3",
+  "active": "ecbac7c4ed38863e",
   "lastOpenFiles": [
+    "figure/Q.png",
+    "figure/backward.png",
+    "figure/forward.png",
+    "Model-Free Policy Evaluation.md",
+    "Model-Free Control.md",
+    "数学原理.md",
+    "Pasted image 20260509101117.png",
+    "figure/TD control.png",
+    "动态规划求解.md",
+    "figure/greedy.png",
     "figure/LambdaWeight.png",
     "figure/NStep.png",
     "figure/PolicyEvaluation.png",
-    "数学原理.md",
     "未命名.base",
-    "动态规划求解.md",
-    "无模型_Policy Evaluation.md",
     "未命名.canvas",
     "figure/迭代.png",
     "figure/MDP.png",
-    "figure/价值迭代.png",
-    "figure/政策迭代.png",
     "figure",
     "新建文件夹",
-    "MDP.png",
-    "迭代.png",
-    "mdp_demo/mdp/resources/inherit.gif",
     "mdp_demo/mdp/VIgui.java~",
     "mdp_demo/mdp/VIgui.java",
     "mdp_demo/mdp/VIgui$GridPanel.class",
     "mdp_demo/mdp/VIgui.html",
     "mdp_demo/mdp/VIgui.class",
     "mdp_demo/mdp/VIgui$9.class",
-    "mdp_demo/mdp/VIgui$8.class",
-    "mdp/resources/inherit.gif"
+    "mdp_demo/mdp/VIgui$8.class"
   ]
 }
