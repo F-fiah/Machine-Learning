@@ -3,7 +3,7 @@ cssclasses:
   - 机器学习
   - 强化学习
 tags:
-  - 2506-05-06
+  - 2506/05/06
 ---
 Nobody tell the environment, but still manage to find the optimal way
 Namely estimate the value function of an unknown MDP

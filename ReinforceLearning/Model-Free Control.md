@@ -77,6 +77,11 @@ $$ \begin{aligned}
 E_0(s,a) &= 0 \\[3pt]
 E_t(s,a) &= \gamma \lambda E_{t-1}(s,a) + \mathbf{1}(S_t = s, A_t = a) 
 \end{aligned} $$
+其中：
+$$\mathbf{1}(S_t = s, A_t = a) = 
+\begin{cases} 
+1 & S_t = s, A_t = a, \\ 0 & otherwise. 
+\end{cases}$$
 $E_t$ 记录了每个 (s,a) 对当前 TD 误差的贡献度
 用当前的 TD 误差，按Eligibility Traces更新所有过去的状态:
 $$ \begin{aligned} 
