@@ -123,7 +123,7 @@ Much lower variance than Monte-Carlo importance sampling, but still very high
 $$ Q(S_t, A_t) \leftarrow Q(S_t, A_t) + \alpha \left( R_{t+1} + \gamma Q(S_{t+1}, A') - Q(S_t, A_t) \right) $$
 
 当处在 $S_t$ 时，通过行为策略 $\mu$ 决定 action $A_t$（会探索），到达下一个 state $S_{t+1}$，得到 $R_{t+1}$
-$A'$ 时目标策略 $\pi$ 在 $S_{t+1}$ 下选择的贪心动作，与 $A_{t+1}$ 无关
+$A'$ 是目标策略 $\pi$ 在 $S_{t+1}$ 下选择的贪心动作，与 $A_{t+1}$ 无关
 
 Q-Learning 通过在更新时直接取目标策略的贪心 Q 值，绕开了对行为策略轨迹的重要性采样，因此方差更低、实现更简单
 
