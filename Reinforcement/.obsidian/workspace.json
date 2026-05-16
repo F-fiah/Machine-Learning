@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "54689b0eba45e46a",
+        "id": "cc3fd209700c03d5",
         "type": "tabs",
         "children": [
           {
-            "id": "cc332856a909b605",
+            "id": "878423215aea7790",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Policy-Based RL.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Policy-Based RL"
+              "title": "新标签页"
             }
           }
         ]
@@ -198,14 +194,15 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "cc332856a909b605",
+  "active": "878423215aea7790",
   "lastOpenFiles": [
-    "Model-Free Control.md",
     "Policy-Based RL.md",
+    "Value Function Approximation.md",
+    "figure/QAC.png",
+    "Model-Free Control.md",
     "动态规划求解.md",
     "数学原理.md",
     "Model-Free Policy Evaluation.md",
-    "Value Function Approximation.md",
     "Pasted image 20260512224544.png",
     "figure/Q.png",
     "figure/backward.png",
@@ -215,7 +212,6 @@
     "figure/greedy.png",
     "figure/LambdaWeight.png",
     "figure/NStep.png",
-    "figure/PolicyEvaluation.png",
     "未命名.base",
     "未命名.canvas",
     "figure",
