@@ -3,7 +3,7 @@ cssclasses:
   - 机器学习
   - 强化学习
 tags:
-  - 2026/05/13-2026/05/16
+  - 2026/05/13-2026/05/15
 ---
 - Value-Based（之前优化 policy 的策略）：先拟合价值函数，再用价值函数见解生成策略（选取使 value 最大化的 action）
 - Policy-Based Reinforcement Learning：直接将策略本身参数化

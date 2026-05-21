@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "cc3fd209700c03d5",
+        "id": "af2f3641cf1e1cd9",
         "type": "tabs",
         "children": [
           {
-            "id": "878423215aea7790",
+            "id": "9420508959a19e78",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Exploration and Exploitation.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "Exploration and Exploitation"
             }
           }
         ]
@@ -49,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:2026-05-04",
+                "query": "tag:2026/05/13-2026/05/16",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -194,15 +198,20 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "878423215aea7790",
+  "active": "9420508959a19e78",
   "lastOpenFiles": [
+    "Exploration and Exploitation.md",
+    "Model-Based RL.md",
+    "2026-05-19.md",
+    "figure/dyna_algorithm.png",
+    "figure/dyna.png",
+    "动态规划求解.md",
     "Policy-Based RL.md",
+    "Model-Free Policy Evaluation.md",
     "Value Function Approximation.md",
     "figure/QAC.png",
     "Model-Free Control.md",
-    "动态规划求解.md",
     "数学原理.md",
-    "Model-Free Policy Evaluation.md",
     "Pasted image 20260512224544.png",
     "figure/Q.png",
     "figure/backward.png",
@@ -210,8 +219,6 @@
     "Pasted image 20260509101117.png",
     "figure/TD control.png",
     "figure/greedy.png",
-    "figure/LambdaWeight.png",
-    "figure/NStep.png",
     "未命名.base",
     "未命名.canvas",
     "figure",
