@@ -135,12 +135,17 @@ $$h_\theta(X)=g(\theta^\mathrm{T}x)$$
 $$ \hat p(y) = h_{\theta_i}(x) =\frac{\mathrm{e}^{\theta_i^\mathrm{T}x}}{\sum_{i=1}^K \mathrm{e}^{\theta_i^\mathrm{T}x}} $$
 从而计算得到所有类型的概率分布
 
-定义第i个样本在输入 $x^{(i)}$ 条件下，标签 $y^{(i)}$ 发生的概率为：
-$$ P(y^{(i)} \mid x^{(i)})=\prod_{k=1}^K p_{ik}^{y_k^{(i)}} $$
-则全局似然概率为：
+如果每个训练样本都只存在一个类别的物体，则可以将该分类问题转换成 K 个二分类问题：
+$$ \mathcal{L} = -\sum_{k=1}^{K} \left[ y_k \log \hat{y}_k + (1 - y_k) \log(1 - \hat{y}_k) \right] $$
+否则，使用交叉熵：
+定义第 i 个样本在输入 $x^{(i)}$ 条件下，标签 $y^{(i)}$ 发生的概率为：
+$$ P(y^{(i)} \mid x^{(i)})=\prod_{k=1}^K (p_{i,k})^{y_k^{(i)}} = p_{i,k_i}$$
+则全局似然概率为： 
 $$ L(\theta)=\prod_{i=1}^N P(y^{(i)}\mid x^{(i)})=\prod_{i=1}^N p_{i,k_i} $$
 取对数并乘-1，可以得到交叉熵损失
 $$ \mathcal{L}(\theta) = -\ln L(\theta) = -\sum_{i=1}^N \ln p_{i,k_i} $$
+单样本损失为：
+$$ \mathcal{L} = -\sum_{k=1}^{K} y_k \ln \hat{y}_k $$
 # 广义线性模型（GLM）
 
 基本假设：
