@@ -37,9 +37,84 @@ $$ \Sigma_i = \frac{\displaystyle \sum_{j=1}^m p_{\mathcal{M}}(z_j = i \mid x_j)
 ```pseudo
 \begin{algorithm} \caption{高斯混合聚类算法} \begin{algorithmic} \INPUT{样本集 $D = \{x_1,x_2,\dots,x_m\}$；高斯混合成分个数 $k$} \OUTPUT{簇划分 $\mathcal{C} = \{C_1,C_2,\dots,C_k\}$} \STATE 初始化高斯混合分布的模型参数 $\{(\phi_i, \mu_i, \Sigma_i) \mid 1 \le i \le k\}$ \REPEAT \FOR{$j = 1,2,\dots,m$} \STATE 计算 $x_j$ 由各混合成分生成的后验概率：$p_{\mathcal{M}}(z_j = i \mid x_j) \ (1 \le i \le k)$ \ENDFOR \FOR{$i = 1,2,\dots,k$} \STATE 计算新均值向量：$\mu_i'$ \STATE 计算新协方差矩阵：$\Sigma_i'$ \STATE 计算新混合系数：$\phi_i'$ \ENDFOR \STATE 将模型参数 $\{(\phi_i, \mu_i, \Sigma_i) \mid 1 \le i \le k\}$ 更新为 $\{(\phi_i', \mu_i', \Sigma_i') \mid 1 \le i \le k\}$ \UNTIL{满足停止条件} \STATE $C_i = \varnothing \quad (1 \le i \le k)$ \FOR{$j = 1,2,\dots,m$} \STATE 确定 $x_j$ 的簇标记 $\lambda_j$ \STATE 将 $x_j$ 划入相应的簇：$C_{\lambda_j} = C_{\lambda_j} \cup \{x_j\}$ \ENDFOR \end{algorithmic} \end{algorithm}
 ```
-## EM 算法
+---
+EM 算法
 
 1. E步（求隐变量后验分布） 
    固定当前模型参数 $\theta$，用贝叶斯公式计算隐变量 $z^{(i)}$ 的后验分布 $Q_i(z^{(i)})$ $$ Q_i(z^{(i)}) := P\big(z^{(i)} \mid x^{(i)};\theta\big) $$
 2. M步（最大化下界更新参数）
    更新全局参数 $\theta$$$ \theta := \arg\max_{\theta} \sum_{i}\sum_{z^{(i)}} Q_i(z^{(i)}) \log \frac{p(x^{(i)},z^{(i)};\theta)}{Q_i(z^{(i)})} $$
+记 $J(\theta,Q) = \sum_{i}\sum_{z^{(i)}} Q_i(z^{(i)}) \log \dfrac{p(x^{(i)},z^{(i)};\theta)}{Q_i(z^{(i)})}$
+
+- E-step：固定 $\theta$，优化 $Q$ 最大化 $J$
+- M-step：固定 E 步求出的最优Q，只优化参数 $\theta$，最大化 $J$
+---
+# 因子分析
+
+- 当样本数量远大于维度数量时，采用高斯混合可以得到很好的聚类效果
+- 当样本数量约等于甚至小于维度数量时，则应当采用因子分析
+
+隐因子服从 d 维标准正态分布 $z \sim \mathcal{N}(0,I),\quad z\in\mathbb R^d,(d < n)$
+$x = \mu + \Lambda z + \epsilon,\quad \epsilon \sim \mathcal{N}(0,\Psi)$，即现实变量为隐变量的线性组合加上高斯噪声
+
+---
+设联合正态向量拆分
+$$ \begin{bmatrix}x_1\\x_2\end{bmatrix} \sim \mathcal{N}\left( \begin{bmatrix}\mu_1\\\mu_2\end{bmatrix}, \begin{bmatrix}\Sigma_{11} & \Sigma_{12}\\ \Sigma_{21} & \Sigma_{22}\end{bmatrix} \right) $$
+则：
+- $x_1 \mid x_2 \sim \mathcal{N}\big(\mu_{1\mid 2},\ \Sigma_{1\mid 2}\big)$
+- $\mu_{1\mid 2} = \mu_1 + \Sigma_{12}\Sigma_{22}^{-1}(x_2 - \mu_2)$
+- $\Sigma_{1\mid 2} = \Sigma_{11} - \Sigma_{12}\Sigma_{22}^{-1}\Sigma_{21}$
+---
+$$ \begin{bmatrix} z \\ x \end{bmatrix} \sim \mathcal{N}\left( \begin{bmatrix} 0 \\ \mu \end{bmatrix},\; \begin{bmatrix} I & \Lambda^\top \\ \Lambda & \Lambda\Lambda^\top + \Psi \end{bmatrix} \right) $$
+E-step：
+1. $\Sigma_x = \Lambda \Lambda^\top + \Psi$
+2. $\Sigma_{z|x} = I_d - \Lambda^\top \Sigma_x^{-1} \Lambda$
+3. $\mu_{z|x^{(i)}} = \Lambda^\top \Sigma_x^{-1} \big(x^{(i)} - \mu\big)$
+4. $Q_i\big(z^{(i)}\big) \triangleq \mathcal{N}\big(z;\mu_{z|x^{(i)}},\Sigma_{z|x}\big)$
+
+M-step：
+1. $Q_i\big(z^{(i)}\big) = \frac{1}{(2\pi)^{d/2} \left|\Sigma_{z|x}\right|^{\frac{1}{2}}} \exp\left( -\frac{1}{2} \big(z^{(i)} - \mu_{z|x^{(i)}}\big)^\top \Sigma_{z|x}^{-1} \big(z^{(i)} - \mu_{z|x^{(i)}}\big) \right)$
+2. $\mathbb{E}_{z^{(i)} \sim Q_i}\left[z^{(i)}\right] = \int_{z^{(i)}} z^{(i)} \cdot Q_i\left(z^{(i)}\right) dz^{(i)} = \mu_{z|x^{(i)}}$
+3.  $$\begin{align} \theta &:= \arg\max_{\theta} \sum_{i} \int_{z^{(i)}} Q_i\big(z^{(i)}\big) \log \frac{p\big(x^{(i)},z^{(i)}\big)}{Q_i\big(z^{(i)}\big)} dz^{(i)} \\ &= \sum_{i} \mathbb{E}_{z^{(i)} \sim Q_i}\left[\log \frac{p\left(x^{(i)}, z^{(i)}\right)}{Q_i\left(z^{(i)}\right)}\right] \end{align}$$
+4. 分别对 $\mu,\Lambda,\Psi$ 求导，令导数 = 0，即可更新 $\mu,\Lambda,\Psi$
+# 主成分分析（PCA）
+
+先对数据进行Z-score 标准化（均值为0，方差为1）：
+$$ \tilde{x}_j^{(i)} = \frac{x_j^{(i)} - \mu_j}{\sqrt{\displaystyle\frac{1}{m}\sum_{i=1}^{m} \big(x_j^{(i)} - \mu_j\big)^2}}, \quad \mu_j = \frac{1}{m}\sum_{i=1}^{m} x_j^{(i)}$$
+**核心：对高维数据进行降维**
+
+理想超平面的性质：
+- 样本点到超平面的距离足够近
+- 样本点在超平面上的投影尽可能分开
+```pseudo
+\begin{algorithm} \caption{PCA算法} \begin{algorithmic} \INPUT{样本集 $D = \{\boldsymbol{x}_1,\boldsymbol{x}_2,\dots,\boldsymbol{x}_m\}$；低维空间维数 $d'$}  \STATE 对所有样本进行中心化: $\boldsymbol{x}_i \leftarrow \boldsymbol{x}_i - \dfrac{1}{m}\sum_{i=1}^m \boldsymbol{x}_i$ \STATE 计算样本的协方差矩阵 $\boldsymbol{X}\boldsymbol{X}^\top$ \STATE 对协方差矩阵 $\boldsymbol{X}\boldsymbol{X}^\top$ 做特征值分解 \STATE 取最大的 $d'$ 个特征值所对应的特征向量 $\boldsymbol{w}_1,\boldsymbol{w}_2,\dots,\boldsymbol{w}_{d'}$ \OUTPUT{投影矩阵 $\boldsymbol{W}^* = (\boldsymbol{w}_1,\boldsymbol{w}_2,\dots,\boldsymbol{w}_{d'})$} \end{algorithmic} \end{algorithm}
+```
+ Try to use the raw data before applying PCA
+
+| 数据结构假设           | Probabilistic（概率模型） | Non-probabilistic（非概率模型，无概率密度） |
+| ---------------- | ------------------- | ------------------------------ |
+| Subspaces（连续子空间） | Factor Analysis     | PCA                            |
+| Clusters（离散簇）    | Mixture of Gaussian | K-means                        |
+# 独立成分分析（ICA）
+
+- $\boldsymbol{x} \in \mathbb{R}^n$：观测混合信号
+- $\boldsymbol{s} \in \mathbb{R}^d$：独立源
+则：$\boldsymbol{x} = \boldsymbol{A}\boldsymbol{s} ,\quad \boldsymbol{s} = \boldsymbol{w}\boldsymbol{x}$
+
+ICA 只有在数据是非高斯分布的时候才可以使用
+
+- PDF：Probability Density Function，描述连续随机变量的概率密度（单位区间内的概率变化速率）
+- CDF：Cumulative Distribution Function
+$$ p_X(\boldsymbol{x}) = p_S(\boldsymbol{W}\boldsymbol{x}) \cdot \left|\det \boldsymbol{W}\right| $$
+ 由于 $s_i$ 相互独立，有：$$ p(\boldsymbol{s}) = \prod_{i=1}^{n} p(s_i) $$
+ 整理可得：$$ p_X(\boldsymbol{x}) = \left(\prod_{i=1}^{n} p_S\big(\boldsymbol{w}_i^\top \boldsymbol{x}\big)\right) \cdot \left|\det \boldsymbol{W}\right| $$
+goal：figure out the matrix $\boldsymbol{W}$
+
+S 的分布是未知的，但优化本质是最大化信号**非高斯性**，只要选用非高斯分布，就不影响最终分离结果
+常采用Logistic 分布：$p_S(z) = \dfrac{e^{-z}}{\left(1 + e^{-z}\right)^2}$（通过对 sigmoid 函数求导得到）
+
+采集 m 个独立样本，则这些样本同时出现的概率即为 $P = \prod_{k=1}^{m} {p}_X\big(\boldsymbol{x}^{(k)}\big)$，只需最大化概率 P 即可
+
+定义似然函数：
+$$\begin{align} \ell(W) &= \sum_{i=1}^m \log\left( \left( \prod_{j=1}^n p_s\left(\boldsymbol{w}_j^\top \boldsymbol{x}^{(i)}\right) \right) \cdot |\det W| \right) \\ &= \sum_{i=1}^m \left[ \sum_{j=1}^n \log p_s\left(\boldsymbol{w}_j^\top \boldsymbol{x}^{(i)}\right) + \log|\det W| \right] \end{align}$$
+通过梯度上升法求最优的 W$$ W_{\text{new}} = W_{\text{old}} + \eta \cdot \nabla_W \ell(W) $$

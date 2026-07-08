@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Journals/2026-07-06.md",
+                "file": "Inbox/非监督学习(Unsupervised Learning).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-07-06"
+              "title": "非监督学习(Unsupervised Learning)"
             }
           }
         ]
@@ -68,7 +68,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "64b5caf922476ccb",
@@ -186,9 +187,18 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "15548ad07120877e",
+  "active": "1e2fda54863d6155",
   "lastOpenFiles": [
+    "Inbox/深度学习.md",
+    "Inbox/模型评估.md",
+    "Inbox/判别学习算法（Discriminative Learning Algorithms）.md",
+    "Inbox/非监督学习(Unsupervised Learning).md",
+    "Attachments/Pasted image 20260707111940.png",
+    "Journals/2026-07-07.md",
+    "Inbox/支持向量机(Support Vector Machine).md",
+    "Inbox/生成学习算法（Generative Learning Algorithms）.md",
     "Journals/2026-07-06.md",
+    "Journals/未命名.md",
     "Templates/TODO LIST.md",
     "非监督学习(Unsupervised Learning).md",
     "Attachments",
@@ -204,7 +214,6 @@
     "Inbox/figure/动量法.png",
     "Inbox/figure/variance.png",
     "Inbox/figure/SVW.png",
-    "Inbox/figure/softmax.png",
     "Inbox/figure",
     "Resources/CS229-Python/week6/1-Evaluating-a-Learning-Algorithm.md",
     "Resources/CS229-Python/ex8/images",
@@ -214,15 +223,9 @@
     "Resources/CS229-Python/ex8/Anomaly Detection and Recommender Systems (Exercises).ipynb",
     "Resources/CS229-Python/README.md",
     "Resources/cs189-su18/README.md",
-    "Inbox/支持向量机(Support Vector Machine).md",
-    "Inbox/生成学习算法（Generative Learning Algorithms）.md",
-    "Inbox/深度学习.md",
-    "Inbox/判别学习算法（Discriminative Learning Algorithms）.md",
-    "Inbox/模型评估.md",
     "Inbox/决策树.md",
     "Inbox/机器学习的应用.md",
     "Inbox/概率分布.md",
-    "Inbox/非监督学习(Unsupervised Learning).md",
     "math_symbols.md",
     "cs189-su18/README.md",
     "未命名.md",
@@ -230,9 +233,6 @@
     "判别学习算法（Discriminative Learning Algorithms）.md",
     "模型评估.md",
     "深度学习.md",
-    "CS229-Python/week6/1-Evaluating-a-Learning-Algorithm.md",
-    "CS229-Python/README.md",
-    "CS229-Python-master/week6/1-Evaluating-a-Learning-Algorithm.md",
-    "CS229-Python-master/README.md"
+    "CS229-Python/week6/1-Evaluating-a-Learning-Algorithm.md"
   ]
 }
