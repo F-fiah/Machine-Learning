@@ -1,0 +1,202 @@
+{
+  "main": {
+    "id": "a6022347d6924810",
+    "type": "split",
+    "children": [
+      {
+        "id": "426075a3c5d2fda5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "97ce64ec6390bd05",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "InBox/Image Classification.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Image Classification"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c4f2d4687c4d2ba6",
+    "type": "split",
+    "children": [
+      {
+        "id": "2ae328515fb59433",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2cadf9bf27f849de",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "840fbb683402d4b3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "8ac7ecd8ee4c35d5",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "036c720450ca3737",
+    "type": "split",
+    "children": [
+      {
+        "id": "3b0a8dbf4af61837",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "825d15f326469ef7",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "InBox/Image Classification.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Image Classification 的反向链接列表"
+            }
+          },
+          {
+            "id": "a5bc35735a7c5a34",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "InBox/Image Classification.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Image Classification 的出链列表"
+            }
+          },
+          {
+            "id": "0c6b47a15611b2c4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "5fce72855409ac13",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "6b0339597073ede3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "InBox/Image Classification.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Image Classification 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false
+    }
+  },
+  "active": "2cadf9bf27f849de",
+  "lastOpenFiles": [
+    "Resources/Resources/30个CV实战项目/5.图像分类/4.真实的Python神经网络教程(图像分类w CNN)  Tensorflow & Keras/neural-nets-master.zip",
+    "Resources/Resources/30个CV实战项目/5.图像分类/2.Image classification using CNN (CIFAR10 dataset)  Deep Learning Tutorial  (Tensorflow & Python) 使用cifar10数据集进行CNN图像分类/deep-learning-keras-tf-tutorial-master.zip",
+    "Resources/Resources/30个CV实战项目/5.图像分类/3.Image Classification With Deep Learning And Tensorflow Intro Project基于深度学习和张量流的图像分类介绍项目/project-walkthroughs-master.zip",
+    "Resources/Resources/30个CV实战项目/4.图像生成/4.PIRenderer：通过语义神经渲染的可控肖像图像生成/PIRender-main.zip",
+    "Resources/Resources/30个CV实战项目/4.图像生成/4.PIRenderer：通过语义神经渲染的可控肖像图像生成/2109.08379.pdf",
+    "Resources/Resources/30个CV实战项目/5.图像分类/1.使用Keras、Tensorflow进行图像分类猫与狗预测卷积神经网络/Cats-Vs-Dogs-Prediction-master.zip",
+    "Resources/Resources/30个CV实战项目/4.图像生成/5.可控人物图像合成的神经纹理提取和分布/2204.06160.pdf",
+    "Resources/Resources/30个CV实战项目/4.图像生成/3.姿态可控人脸生成/1807.07860.pdf",
+    "Resources/Resources/30个CV实战项目/4.图像生成/5.可控人物图像合成的神经纹理提取和分布/Neural-Texture-Extraction-Distribution-main.zip",
+    "Resources/Resources/30个CV实战项目/4.图像生成/2.Barbershop GAN-based Image Compositing using Segmentation Masks（Barbershop：使用分割mask的GAN图像合/Barbershop-main.zip",
+    "Resources/Resources/30个CV实战项目/4.图像生成/1.Show Me What and Tell Me How Video Synthesis via Multimodal Conditioning演示什么和讲述如何通过多模态调节进行视频合成/MMVID-main.zip",
+    "InBox/Image Classification.md",
+    "Templates/TODO LIST.md"
+  ]
+}
