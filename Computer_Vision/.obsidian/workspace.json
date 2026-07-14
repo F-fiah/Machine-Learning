@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "426075a3c5d2fda5",
+        "id": "9a855d8090f6c768",
         "type": "tabs",
         "children": [
           {
-            "id": "97ce64ec6390bd05",
+            "id": "6aa0f97f51e11a96",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "InBox/Image Classification.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Image Classification"
+              "title": "新标签页"
             }
           }
         ]
@@ -78,7 +74,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 265.50152587890625,
+    "collapsed": true
   },
   "right": {
     "id": "036c720450ca3737",
@@ -164,12 +161,23 @@
               "icon": "lucide-list",
               "title": "Image Classification 的大纲"
             }
+          },
+          {
+            "id": "be7301b403be7c96",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {},
+              "icon": "lucide-info",
+              "title": "笔记属性"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
@@ -183,8 +191,31 @@
       "bases:新建数据库": false
     }
   },
-  "active": "2cadf9bf27f849de",
+  "active": "6aa0f97f51e11a96",
   "lastOpenFiles": [
+    "Journals/2026-07-14.md",
+    "InBox/Generative Model.md",
+    "InBox/Self-Supervised Learning.md",
+    "InBox/图像处理.md",
+    "Attachments/3D-CNN.png",
+    "InBox/Attention and Transformers.md",
+    "Journals/2026-07-13.md",
+    "InBox/视频处理.md",
+    "Journals/2026-07-12.md",
+    "Attachments/transformers.png",
+    "InBox/神经网络.md",
+    "Attachments/Self-Attention.png",
+    "Attachments/attention.png",
+    "Attachments/Cross-Attention.jpg",
+    "Journals/2026-07-11.md",
+    "Attachments/RNN-disad.png",
+    "InBox/Image Classification.md",
+    "Attachments/rnn-cell.png",
+    "Attachments/RNN.png",
+    "Journals/2026-07-10.md",
+    "Templates/TODO LIST.md",
+    "Attachments/Pasted image 20260710094625.png",
+    "Attachments/cnn-summary.png",
     "Resources/Resources/30个CV实战项目/5.图像分类/4.真实的Python神经网络教程(图像分类w CNN)  Tensorflow & Keras/neural-nets-master.zip",
     "Resources/Resources/30个CV实战项目/5.图像分类/2.Image classification using CNN (CIFAR10 dataset)  Deep Learning Tutorial  (Tensorflow & Python) 使用cifar10数据集进行CNN图像分类/deep-learning-keras-tf-tutorial-master.zip",
     "Resources/Resources/30个CV实战项目/5.图像分类/3.Image Classification With Deep Learning And Tensorflow Intro Project基于深度学习和张量流的图像分类介绍项目/project-walkthroughs-master.zip",
@@ -194,9 +225,6 @@
     "Resources/Resources/30个CV实战项目/4.图像生成/5.可控人物图像合成的神经纹理提取和分布/2204.06160.pdf",
     "Resources/Resources/30个CV实战项目/4.图像生成/3.姿态可控人脸生成/1807.07860.pdf",
     "Resources/Resources/30个CV实战项目/4.图像生成/5.可控人物图像合成的神经纹理提取和分布/Neural-Texture-Extraction-Distribution-main.zip",
-    "Resources/Resources/30个CV实战项目/4.图像生成/2.Barbershop GAN-based Image Compositing using Segmentation Masks（Barbershop：使用分割mask的GAN图像合/Barbershop-main.zip",
-    "Resources/Resources/30个CV实战项目/4.图像生成/1.Show Me What and Tell Me How Video Synthesis via Multimodal Conditioning演示什么和讲述如何通过多模态调节进行视频合成/MMVID-main.zip",
-    "InBox/Image Classification.md",
-    "Templates/TODO LIST.md"
+    "Resources/Resources/30个CV实战项目/4.图像生成/2.Barbershop GAN-based Image Compositing using Segmentation Masks（Barbershop：使用分割mask的GAN图像合/Barbershop-main.zip"
   ]
 }
