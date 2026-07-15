@@ -1,0 +1,100 @@
+Deep learning is a subfield of machine learning based on artificial neural networks and representation learning.
+It enables computational models to learn hierarchical representations of data from multiple processing layers.
+The term deep refers to the use of multiple hidden layers in the network architecture.
+Early artificial neural networks were inspired by the structure and function of the human brain.
+A single artificial neuron computes a weighted sum of its inputs and applies a nonlinear activation function.
+The perceptron is one of the earliest and simplest types of artificial neural networks.
+However, a single-layer perceptron cannot solve problems that are not linearly separable.
+The backpropagation algorithm made it possible to efficiently train deep neural networks.
+It calculates the gradient of the loss function with respect to each weight by the chain rule.
+Gradient descent is the most common optimization algorithm used to update network parameters.
+Overfitting occurs when a model performs well on training data but fails to generalize to new data.
+Regularization techniques such as dropout help prevent overfitting in deep models.
+Convolutional neural networks are particularly effective for processing grid-like data such as images.
+They use convolutional layers to extract local features from the input data.
+Pooling layers reduce the spatial dimensions of feature maps while retaining important information.
+Recurrent neural networks are designed to process sequential data such as text and speech.
+They maintain a hidden state that acts as a form of short-term memory for the network.
+Standard recurrent networks suffer from the vanishing gradient problem on long sequences.
+This problem makes it difficult for the model to learn long-range dependencies in the data.
+Long short-term memory networks were introduced to address the vanishing gradient issue.
+They use special gate mechanisms to control the flow of information through the cell state.
+The forget gate decides which information to discard from the previous cell state.
+The input gate determines which new values to store in the current cell state.
+The output gate controls which parts of the cell state are used to produce the output.
+Gated recurrent units are a simplified variant of long short-term memory networks.
+They combine the forget and input gates into a single update gate.
+Gated recurrent units often achieve similar performance with fewer parameters and faster computation.
+Natural language processing is one of the most important application areas of deep learning.
+Language models estimate the probability of a sequence of words appearing in a language.
+They can be used to generate coherent text or to improve speech recognition systems.
+Word embeddings map discrete words to continuous low-dimensional vector spaces.
+These vectors capture semantic and syntactic relationships between words.
+Machine translation aims to automatically convert text from one language to another.
+Early statistical machine translation systems relied heavily on hand-crafted features.
+Neural machine translation uses end-to-end neural networks for translation tasks.
+The encoder-decoder architecture is widely used in neural machine translation.
+The encoder processes the source sentence and generates a fixed-length context vector.
+The decoder generates the target sentence step by step from the context vector.
+Attention mechanisms allow the decoder to focus on relevant parts of the source sentence.
+This approach significantly improves the quality of long sentence translation.
+The Transformer architecture was proposed in 2017 and is based entirely on self-attention.
+It eliminates the recurrent and convolutional layers used in previous sequence models.
+Self-attention allows the model to directly relate any two positions in the sequence.
+Multi-head attention enables the model to jointly attend to information from different subspaces.
+Positional encoding is added to input embeddings to preserve sequence order information.
+The Transformer enables much higher parallelism during training compared to recurrent networks.
+This advantage has led to the rapid development of large-scale pre-trained language models.
+BERT is a bidirectional pre-trained model based on the Transformer encoder.
+It achieves state-of-the-art results on a wide range of natural language understanding tasks.
+GPT is an autoregressive language model built with the Transformer decoder.
+It generates fluent and coherent text by predicting the next token in a sequence.
+Transfer learning allows knowledge learned from one task to be applied to other related tasks.
+Pre-training on large general corpora followed by fine-tuning on specific tasks has become standard.
+Computer vision is another major field where deep learning has achieved breakthrough results.
+Image classification is the task of assigning input images to predefined categories.
+Object detection locates and identifies multiple objects within a single image.
+Semantic segmentation assigns a class label to every pixel in the input image.
+Generative adversarial networks consist of a generator and a discriminator.
+The two networks are trained simultaneously in a competitive game setting.
+Generative models can produce realistic synthetic images, audio, and text.
+Speech recognition converts spoken audio signals into written text.
+Recurrent and Transformer models are both widely used in modern speech recognition systems.
+Automatic speech recognition has greatly improved the accessibility of digital devices.
+Reinforcement learning trains agents to make optimal decisions through interaction with the environment.
+Deep reinforcement learning combines deep learning with reinforcement learning algorithms.
+It has achieved superhuman performance in many complex games and control tasks.
+Gradient clipping is a common technique to prevent gradient explosion in recurrent networks.
+It rescales gradients when their norm exceeds a predefined threshold.
+Weight initialization has a significant impact on the convergence speed of deep networks.
+Proper initialization helps avoid gradient vanishing or explosion at the start of training.
+Batch normalization stabilizes the training process by normalizing layer inputs.
+It reduces internal covariate shift and allows the use of higher learning rates.
+The learning rate is one of the most important hyperparameters in neural network training.
+A learning rate that is too high causes unstable training, while one that is too low leads to slow convergence.
+Learning rate scheduling adjusts the learning rate dynamically during training.
+Common schedulers include step decay, exponential decay, and cosine annealing.
+Activation functions introduce nonlinearity into neural network models.
+Common activation functions include sigmoid, tanh, ReLU, and their variants.
+The ReLU function is widely used because it alleviates the vanishing gradient problem to some extent.
+Leaky ReLU introduces a small positive slope for negative inputs to avoid dead neurons.
+Dropout randomly deactivates a fraction of neurons during the training phase.
+It forces the network to learn redundant and robust feature representations.
+Early stopping terminates training when the validation performance stops improving.
+It is one of the most effective and simple regularization strategies.
+Data augmentation artificially expands the training dataset by applying transformations.
+For images, common augmentations include rotation, cropping, flipping, and color jitter.
+For text, common augmentations include synonym replacement and back translation.
+Evaluation metrics measure the performance of a model on a given task.
+Accuracy, precision, recall, and F1-score are common classification metrics.
+Mean squared error and mean absolute error are common regression metrics.
+Perplexity is a standard metric for evaluating the quality of language models.
+A lower perplexity value indicates that the model predicts the text more accurately.
+The training dataset is used to update the parameters of the neural network.
+The validation dataset is used to tune hyperparameters and select the best model.
+The test dataset provides an unbiased evaluation of the final trained model.
+It is important to keep the test dataset completely separate during the training process.
+Deep learning models require large amounts of labeled data to achieve good performance.
+Semi-supervised learning uses both labeled and unlabeled data for training.
+Unsupervised learning discovers hidden patterns in data without labeled outputs.
+The field of deep learning continues to evolve rapidly with new architectures and algorithms emerging every year.

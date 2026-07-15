@@ -3,5 +3,6 @@
   "newFileFolderPath": "InBox",
   "attachmentFolderPath": "Attachments",
   "alwaysUpdateLinks": true,
-  "showUnsupportedFiles": true
+  "showUnsupportedFiles": true,
+  "promptDelete": false
 }
