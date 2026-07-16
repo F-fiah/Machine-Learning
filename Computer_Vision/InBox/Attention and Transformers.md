@@ -42,7 +42,7 @@ Solution：look back at the whole input sequence on each step of the output
 ![[Cross-Attention.jpg|392]]
 ## Self-Attention
 
-Q、K、V 均全部来自同一份输入序列X，自己和自己匹配
+Q、K、V 均全部来自同一份输入序列 X，自己和自己匹配
 
 - $X \in \mathbb{R}^{N \times D_{in}}$
 - $W_Q, W_K, W_V \in \mathbb{R}^{D_{in} \times D_{out}}$

@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c94812679e69d62e",
+        "id": "415a762b0031ebde",
         "type": "tabs",
         "children": [
           {
-            "id": "682f5ae8d450ef2d",
+            "id": "588c4e5097a0aa11",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -74,8 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "036c720450ca3737",
@@ -191,12 +190,13 @@
       "bases:新建数据库": false
     }
   },
-  "active": "682f5ae8d450ef2d",
+  "active": "588c4e5097a0aa11",
   "lastOpenFiles": [
+    "InBox/Attention and Transformers.md",
+    "Attachments/cnn-summary.png",
     "Journals/2026-07-15.md",
     "InBox/Mlti-Modal Foundation Models.md",
     "InBox/3D Vision.md",
-    "InBox/Attention and Transformers.md",
     "Journals/2026-07-14.md",
     "Journals/2026-07-13.md",
     "Journals/2026-07-12.md",
@@ -218,7 +218,6 @@
     "Attachments/RNN.png",
     "Templates/TODO LIST.md",
     "Attachments/Pasted image 20260710094625.png",
-    "Attachments/cnn-summary.png",
     "Resources/Resources/30个CV实战项目/5.图像分类/4.真实的Python神经网络教程(图像分类w CNN)  Tensorflow & Keras/neural-nets-master.zip",
     "Resources/Resources/30个CV实战项目/5.图像分类/2.Image classification using CNN (CIFAR10 dataset)  Deep Learning Tutorial  (Tensorflow & Python) 使用cifar10数据集进行CNN图像分类/deep-learning-keras-tf-tutorial-master.zip",
     "Resources/Resources/30个CV实战项目/5.图像分类/3.Image Classification With Deep Learning And Tensorflow Intro Project基于深度学习和张量流的图像分类介绍项目/project-walkthroughs-master.zip",
