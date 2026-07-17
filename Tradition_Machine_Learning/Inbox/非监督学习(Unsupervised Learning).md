@@ -87,7 +87,7 @@ $$ \tilde{x}_j^{(i)} = \frac{x_j^{(i)} - \mu_j}{\sqrt{\displaystyle\frac{1}{m}\s
 - 样本点到超平面的距离足够近
 - 样本点在超平面上的投影尽可能分开
 ```pseudo
-\begin{algorithm} \caption{PCA算法} \begin{algorithmic} \INPUT{样本集 $D = \{\boldsymbol{x}_1,\boldsymbol{x}_2,\dots,\boldsymbol{x}_m\}$；低维空间维数 $d'$}  \STATE 对所有样本进行中心化: $\boldsymbol{x}_i \leftarrow \boldsymbol{x}_i - \dfrac{1}{m}\sum_{i=1}^m \boldsymbol{x}_i$ \STATE 计算样本的协方差矩阵 $\boldsymbol{X}\boldsymbol{X}^\top$ \STATE 对协方差矩阵 $\boldsymbol{X}\boldsymbol{X}^\top$ 做特征值分解 \STATE 取最大的 $d'$ 个特征值所对应的特征向量 $\boldsymbol{w}_1,\boldsymbol{w}_2,\dots,\boldsymbol{w}_{d'}$ \OUTPUT{投影矩阵 $\boldsymbol{W}^* = (\boldsymbol{w}_1,\boldsymbol{w}_2,\dots,\boldsymbol{w}_{d'})$} \end{algorithmic} \end{algorithm}
+\begin{algorithm} \caption{ PCA算法} \begin{algorithmic} \INPUT{样本集 $D = \{\boldsymbol{x}_1,\boldsymbol{x}_2,\dots,\boldsymbol{x}_m\}$；低维空间维数 $d'$}  \STATE 对所有样本进行中心化: $\boldsymbol{x}_i \leftarrow \boldsymbol{x}_i - \dfrac{1}{m}\sum_{i=1}^m \boldsymbol{x}_i$ \STATE 计算样本的协方差矩阵 $\boldsymbol{X}\boldsymbol{X}^\top$ \STATE 对协方差矩阵 $\boldsymbol{X}\boldsymbol{X}^\top$ 做特征值分解 \STATE 取最大的 $d'$ 个特征值所对应的特征向量 $\boldsymbol{w}_1,\boldsymbol{w}_2,\dots,\boldsymbol{w}_{d'}$ \OUTPUT{投影矩阵 $\boldsymbol{W}^* = (\boldsymbol{w}_1,\boldsymbol{w}_2,\dots,\boldsymbol{w}_{d'})$} \end{algorithmic} \end{algorithm}
 ```
  Try to use the raw data before applying PCA
 

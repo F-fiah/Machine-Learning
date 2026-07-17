@@ -68,8 +68,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "64b5caf922476ccb",
@@ -161,8 +160,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "icon": "lucide-ghost",
+              "title": "git-view"
             }
           }
         ],
@@ -182,21 +181,24 @@
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "bases:新建数据库": false,
-      "obsidian-git:Open Git source control": false,
       "workspaces:管理工作区布局": false,
-      "random-note:开始漫游笔记": false
+      "random-note:开始漫游笔记": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "1e2fda54863d6155",
   "lastOpenFiles": [
-    "Inbox/深度学习.md",
-    "Inbox/模型评估.md",
-    "Inbox/判别学习算法（Discriminative Learning Algorithms）.md",
+    "Inbox/决策树.md",
+    "Inbox/机器学习的应用.md",
+    "Inbox/概率分布.md",
     "Inbox/非监督学习(Unsupervised Learning).md",
-    "Attachments/Pasted image 20260707111940.png",
-    "Journals/2026-07-07.md",
+    "Inbox/模型评估.md",
+    "Inbox/深度学习.md",
     "Inbox/支持向量机(Support Vector Machine).md",
     "Inbox/生成学习算法（Generative Learning Algorithms）.md",
+    "Inbox/判别学习算法（Discriminative Learning Algorithms）.md",
+    "Attachments/Pasted image 20260707111940.png",
+    "Journals/2026-07-07.md",
     "Journals/2026-07-06.md",
     "Journals/未命名.md",
     "Templates/TODO LIST.md",
@@ -223,9 +225,6 @@
     "Resources/CS229-Python/ex8/Anomaly Detection and Recommender Systems (Exercises).ipynb",
     "Resources/CS229-Python/README.md",
     "Resources/cs189-su18/README.md",
-    "Inbox/决策树.md",
-    "Inbox/机器学习的应用.md",
-    "Inbox/概率分布.md",
     "math_symbols.md",
     "cs189-su18/README.md",
     "未命名.md",
